@@ -1,0 +1,28 @@
+{{extends "./layouts/base.jet"}}
+
+{{block browserTitle()}}Imperitor Portal - Welcome{{end}}
+
+{{block css()}}
+
+{{end}}
+
+{{block pageContent()}}
+<div class="col text-center">
+  <div class="d-flex align-items-center justify-content-center mt-5">
+    <div>
+      <img src="/public/images/logo.jpg" class="mb-5" style="width: 100px;height:auto;">
+      <h1>{{app_name}}</h1>
+      <hr>
+      <small class="text-muted">Welcome to the portal</small>
+    </div>
+  </div>
+  <hr>
+  <h2>Authenticate</h2>
+  <div class="list-group">
+    <a href="/admin/users/login" class="list-group-item list-group-item-action">Login Admin</a>
+  </div>
+</div>
+{{end}}
+
+{{block js()}}
+{{end}}

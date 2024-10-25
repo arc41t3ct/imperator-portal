@@ -1,0 +1,31 @@
+{{extends "./layouts/base.jet"}}
+
+{{block browserTitle()}}Imperitor - Welcome{{end}}
+
+{{block css()}}
+
+{{end}}
+
+{{block pageContent()}}
+<div class="col text-center">
+  <div class="d-flex align-items-center justify-content-center mt-5">
+    <div>
+      <img src="/public/images/logo.jpg" class="mb-5" style="width: 100px;height:auto;">
+      <h1>{{app_name}}</h1>
+      <hr>
+      <small class="text-muted">Welcome to the admin area</small>
+      {{if .IsAuthenticated}}
+      <small>Authenticated: <a href="/admin/users/logout">Logout</a></small>
+      {{end}}
+    </div>
+  </div>
+  <hr>
+  <h2>Administration</h2>
+  <div class="list-group">
+    <a href="/admin/area" class="list-group-item list-group-item-action">Do Something</a>
+  </div>
+</div>
+{{end}}
+
+{{block js()}}
+{{end}}
